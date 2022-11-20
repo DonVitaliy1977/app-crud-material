@@ -53,7 +53,8 @@
 
     <div align="end" mat-dialog-actions>
       <button mat-dialog-close mat-raised-button>Відмінити</button>
-      <button [disabled]="form.invalid" (click)="addProduct()" color="accent" mat-raised-button>Зберегти</button>
+      <button [disabled]="form.invalid" (click)="editData?updatedProduct(): addProduct()" color="accent"
+        mat-raised-button>{{editData?'Змінити':'Зберегти'}}</button>
     </div>
   </form>
 </div>
